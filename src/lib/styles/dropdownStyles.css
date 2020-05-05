@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Manrope");
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow-x: scroll;
+  background-color: #202125;
+  width: 400px;
+  height: 100vh;
+  display: block;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+  margin: 30px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px !important;
+  font-family: "Manrope";
+  color: #fff;
+  display: inline-block;
+  padding-left: 10px !important;
+  margin: calc(1rem - 0.14285714em) 0em 1rem !important;
+}
+
+.icon {
+  height: 20px;
+  width: auto;
+}
+
+.wrapper-main {
+  background-color: #16171b;
+  border-radius: 6px;
+  width: 350px;
+  padding: 0px 20px 20px 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.wrapper-main:nth-child(2) {
+  background-color: #16171b;
+  border-radius: 6px;
+  width: 350px;
+  padding: 0px 20px 20px 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.wrapper-main:hover {
+  background-color: #40A9F3;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0px 7px #40A9F3;
+}
+
+.dropdown {
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+/*Override semantic-ui-react styling*/
+.ui.dropdown {
+  background-color: #202125 !important;
+  color: #fff !important;
+  border: none !important;
+  font-family: "Manrope" !important;
+}
+
+.ui.dropdown .menu,
+.ui.dropdown .menu > .item,
+.ui.dropdown .menu > .header,
+.ui.dropdown > .text > .description,
+.ui.dropdown .menu > .item > .description,
+.ui.dropdown .menu > .message:not(.ui),
+.ui.selection.active.dropdown,
+.ui.selection.active.dropdown .menu,
+.ui.selection.dropdown:focus,
+.ui.selection.dropdown:focus .menu,
+.ui.search.dropdown > input.search,
+.ui.active.search.dropdown input.search:focus + .text {
+  background-color: #16171b !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.ui.search.selection.dropdown > input.search {
+  background-color: #202125 !important;
+}
+
+.ui.selection.dropdown > .dropdown.icon {
+  top: 0.1em !important;
+  margin: 0 !important;
+}
+
+.ui.input > input {
+  background-color: #202125 !important;
+  color: #fff !important;
+  border: none !important;
+  font-family: "Manrope" !important;
+  width: 280px !important;
+}

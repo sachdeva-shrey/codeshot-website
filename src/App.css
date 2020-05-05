@@ -1,0 +1,21 @@
+body {
+  background-color: #16171B !important;
+}
+
+@font-face {
+  font-family: Fira-Code-Regular;
+  src: url("./lib/fonts/FiraCode-Regular.otf");
+}
+
+@font-face {
+  font-family: Anonymous;
+  src: url('./lib/fonts/Anonymous.ttf');
+}
+
+/* .CodeMirror {
+  font-family: 'Anonymous' !important;
+} */
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
