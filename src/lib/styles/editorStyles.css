@@ -1,14 +1,10 @@
 * {
   margin: 0;
   padding: 0;
-  /* overflow: auto; */
 }
 
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
 
-body {
-  /* font-family: "Montserrat", sans-serif; */
-}
 
 @font-face {
   font-family: Fira-Code-Regular;
@@ -29,18 +25,10 @@ body {
   font-size: 1.2em;
   padding: 20px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  /* font-family: 'Anonymous' !important; */
-  /* font-family: 'Fira-Code-Regular' !important; */
-  /* font-family: "IBM Plex Mono" ; */
-  /* position: absolute !important;
-  top: 0; */
-  /* left: 45%; */
 }
 
 .container {
   margin-left: 430px;
-  /* background-color: aliceblue; */
-  /* font-family: 'Raleway'; */
   height: 100%;
   padding: 30px;
   margin-top: 20px;

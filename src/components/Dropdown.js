@@ -49,7 +49,7 @@ const DropdownWrapper = () => {
 
   const handlePreview = (e) => {
     setColor(e.target.value);
-    if(e.target.value === '') {
+    if(e.target.value == '') {
       setBackgroundColor('#f9f9f9')
       setColor('#f9f9f9')
     }
