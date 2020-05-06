@@ -8,7 +8,6 @@ const Store = ({ children }) => {
   const [font, setFont] = useState("Fira Code");
   const [fontSize, setFontSize] = useState("16px");
   const [backgroundColor, setBackgroundColor] = useState("#f9f9f9");
-  console.log(fontSize);
   return (
     <StoreContext.Provider
       value={{

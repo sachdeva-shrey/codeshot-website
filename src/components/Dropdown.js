@@ -1,14 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Dropdown, Input } from "semantic-ui-react";
 import "semantic-ui-css/semantic.css";
 import styled from "styled-components";
 
-import Store, { StoreContext } from "../utils/context/Store"
-import { themeOptions } from '../utils/constants/options/themeOptions'
-import { fontOptions } from '../utils/constants/options/fonts'
-import { languageOptions } from '../utils/constants/options/languageOptions'
-import { ExportButton } from "./Button";
-import { ShareButton } from "./Button";
+import Store, { StoreContext } from "../utils/context/Store";
+import { themeOptions } from '../utils/constants/options/themeOptions';
+import { fontOptions } from '../utils/constants/options/fonts';
+import { languageOptions } from '../utils/constants/options/languageOptions';
 import Selectors from "./Selectors";
 import "../lib/styles/dropdownStyles.css";
 import font_icon from "../lib/icons/font_icon.svg";
@@ -29,7 +27,6 @@ const DropdownWrapper = () => {
 
   const handleFontChange = (none, font) => {
     setFont(font.value);
-    console.log(font.value)
   };
 
   const handleLanguageChange = (none, lang) => {
@@ -40,10 +37,7 @@ const DropdownWrapper = () => {
     if(e.target.value === '') {
       setBackgroundColor("#F9F9F9")
     }
-    else {
-      setBackgroundColor(e.target.value)
-    }
-    console.log(e.target.value);
+    else setBackgroundColor(e.target.value)
   };
 
   return (
@@ -96,8 +90,7 @@ const DropdownWrapper = () => {
           <Input placeholder="#F9F9F9" onChange={handlePreview} />
         </Container>
       </div>
-      <ExportButton />
-      <ShareButton />
+      
     </div>
   );
 };
