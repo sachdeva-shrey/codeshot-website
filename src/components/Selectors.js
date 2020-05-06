@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { FontSizeContext } from "../utils/context/Store";
+import { StoreContext } from "../utils/context/Store";
 
 const Button = styled.button`
   /* Same as above */
@@ -32,7 +32,7 @@ const ButtonGroup = styled.div`
 
 export default function Selectors() {
   const types = ["H1", "H2", "H3", "H4"];
-  const [fontSize, setFontSize] = useContext(FontSizeContext);
+  const {fontSize, setFontSize} = useContext(StoreContext);
   let size;
 
   const handleClick = (e) => {

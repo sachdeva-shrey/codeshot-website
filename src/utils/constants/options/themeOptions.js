@@ -1,8 +1,8 @@
 export const themeOptions = [
     { key: "3024-day", value: "3024-day", text: "3024 Day" },
     { key: "3024-night", value: "3024-night", text: "3024 Night" },
-    { key: "adbcdef", value: "adbcdef", text: "abcdef" },
-    { key: "ambiance-mobile", value: "ambiance-mobile", text: "Ambiance Mobile" },
+    { key: "abcdef", value: "abcdef", text: "abcdef" },
+    { key: "ambianceMobile", value: "ambianceMobile", text: "Ambiance Mobile" },
     { key: "ayu-dark", value: "ayu-dark", text: "Ayu Dark" },
     { key: "ayu-mirage", value: "ayu-mirage", text: "Ayu Mirage" },
     { key: "base16-dark", value: "base16-dark", text: "Base 16 Dark" },

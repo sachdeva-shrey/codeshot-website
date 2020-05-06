@@ -4,7 +4,7 @@ import styled from "styled-components";
 import * as WebFont from "webfontloader";
 
 import "../lib/styles/editorStyles.css";
-import { ThemeContext, LangContext, FontContext, FontSizeContext, BackgroundColorContext } from "../utils/context/Store";
+import { StoreContext } from "../utils/context/Store";
 import { DEFAULT_FONTS } from '../utils/constants/options/fonts'
 import { DEFAULT_LANG } from '../utils/constants/default/default'
 import { DEFAULT_THEME } from '../utils/constants/default/default'
@@ -16,12 +16,11 @@ import themes from '../utils/imports/modes'
 
 export const StyledEditor = () => {
   const [snippet, setSnippet] = useState(`${DEFAULT_SNIPPET}`);
-  const [editorTheme, setEditorTheme] = useContext(ThemeContext);
-  const [lang, setLang] = useContext(LangContext);
-  const [font, setFont] = useContext(FontContext);
-  const [fontSize, setFontSize] = useContext(FontSizeContext);
-  const [backroundColor, setBackgroundColor] = useContext(BackgroundColorContext)
-
+  const {editorTheme, setEditorTheme} = useContext(StoreContext);
+  const {lang, setLang} = useContext(StoreContext);
+  const {font, setFont} = useContext(StoreContext);
+  const {fontSize, setFontSize} = useContext(StoreContext);
+  const {backgroundColor, setBackgroundColor} = useContext(StoreContext)
   WebFont.load({
     google: {
       families: DEFAULT_FONTS,
@@ -48,18 +47,20 @@ export const StyledEditor = () => {
   useEffect(() => {
     console.log("font selected", font)
     console.log("theme", editorTheme)
-  }, [font, editorTheme])
+    console.log("lang", lang)
+    console.log("font size", fontSize)
+    console.log("color", backgroundColor)
+  }, [font, editorTheme, fontSize, backgroundColor])
 
   return (
     <>
       <Wrapper>
         <EditorStyled
         className="container"
-        // style={{ fontFamily: `${font} `}}
         value={snippet}
         options={OPTIONS}
         onBeforeChange={onChange}
-        backgroundColor={backroundColor}
+        backgroundColor={backgroundColor}
         fontSize={fontSize}
         font={font}
       />

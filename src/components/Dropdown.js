@@ -3,7 +3,7 @@ import { Dropdown, Input } from "semantic-ui-react";
 import "semantic-ui-css/semantic.css";
 import styled from "styled-components";
 
-import { ThemeContext, LangContext, BackgroundColorContext, FontContext } from "../utils/context/Store"
+import Store, { StoreContext } from "../utils/context/Store"
 import { themeOptions } from '../utils/constants/options/themeOptions'
 import { fontOptions } from '../utils/constants/options/fonts'
 import { languageOptions } from '../utils/constants/options/languageOptions'
@@ -16,23 +16,12 @@ import theme_icon from "../lib/icons/theme_icon.svg";
 import background_icon from "../lib/icons/background_icon.svg";
 import language_icon from "../lib/icons/language_icon.svg";
 
-const ColorPreview = styled.div`
-  height: 40px;
-  width: 40px;
-  border-radius: 5px;
-  margin-right: 10px;
-  background-color: ${(props) => props.color};
-`;
-const Container = styled.div`
-  display: flex;
-`;
 
 const DropdownWrapper = () => {
-  const [font, setFont] = useContext(FontContext);
-  const [color, setColor] = useState("#f9f9f9");
-  const [theme, setTheme] = useContext(ThemeContext)
-  const [lang, setLang] = useContext(LangContext)
-  const [backgroundColor, setBackgroundColor] = useContext(BackgroundColorContext)
+  const {font, setFont} = useContext(StoreContext);
+  const {theme, setTheme} = useContext(StoreContext);
+  const {lang, setLang}  = useContext(StoreContext);
+  const {backgroundColor, setBackgroundColor} = useContext(StoreContext);
 
   const handleThemeChange = (none, theme) => {
     setTheme(theme.value);
@@ -48,12 +37,12 @@ const DropdownWrapper = () => {
   };
 
   const handlePreview = (e) => {
-    setColor(e.target.value);
-    if(e.target.value == '') {
-      setBackgroundColor('#f9f9f9')
-      setColor('#f9f9f9')
+    if(e.target.value === '') {
+      setBackgroundColor("#F9F9F9")
     }
-    else setBackgroundColor(e.target.value)
+    else {
+      setBackgroundColor(e.target.value)
+    }
     console.log(e.target.value);
   };
 
@@ -103,7 +92,7 @@ const DropdownWrapper = () => {
         <img className="icon" src={background_icon} alt="background_icon"></img>
         <h1>Background Color</h1>
         <Container>
-          <ColorPreview color={color}></ColorPreview>
+          <ColorPreview color={backgroundColor}></ColorPreview>
           <Input placeholder="#F9F9F9" onChange={handlePreview} />
         </Container>
       </div>
@@ -112,5 +101,16 @@ const DropdownWrapper = () => {
     </div>
   );
 };
+
+const ColorPreview = styled.div`
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: ${(props) => props.color};
+`;
+const Container = styled.div`
+  display: flex;
+`;
 
 export default DropdownWrapper;
