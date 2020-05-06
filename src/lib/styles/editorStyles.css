@@ -19,7 +19,9 @@
 .CodeMirror {
   border-radius: 5px;
   height: auto !important;
+  overscroll-behavior: none !important;
   width: 1000px;
+  /* overflow: scroll !important; */
   padding-left: 30px !important;
   padding-top: 30px !important;
   font-size: 1.2em;
@@ -29,8 +31,14 @@
 
 .container {
   margin-left: 430px;
+  width: 70%;
   height: 100%;
   padding: 30px;
   margin-top: 20px;
   margin-bottom: 20px;
+  /* overflow: scroll !important; */
+}
+
+body .CodeMirror-scroll  {
+  overflow: hidden !important;
 }

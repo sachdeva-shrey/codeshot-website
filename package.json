@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "codemirror": "^5.53.2",
     "dom-to-image": "^2.6.0",
+    "dom-to-image-more": "^2.8.0",
     "file-saver": "^2.0.2",
     "html-to-image": "^0.1.1",
     "html2canvas": "^1.0.0-rc.5",

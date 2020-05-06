@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useRef, useState, useContext } from "react";
 import { Controlled as CodeMirror } from "react-codemirror2";
 import styled from "styled-components";
 import * as WebFont from "webfontloader";
@@ -11,14 +11,15 @@ import { DEFAULT_LANG, DEFAULT_THEME, DEFAULT_SNIPPET } from '../utils/constants
 import "codemirror/lib/codemirror.css";
 import themes from '../utils/imports/modes'
 
-export const StyledEditor = () => {
+export const StyledEditor = ({myRef}) => {
   const [snippet, setSnippet] = useState(`${DEFAULT_SNIPPET}`);
   const {editorTheme, setEditorTheme} = useContext(StoreContext);
   const {lang, setLang} = useContext(StoreContext);
   const {font, setFont} = useContext(StoreContext);
   const {fontSize, setFontSize} = useContext(StoreContext);
   const {backgroundColor, setBackgroundColor} = useContext(StoreContext);
-  const editor = useRef();
+
+  // const editor = useRef();
 
   WebFont.load({
     google: {
@@ -45,9 +46,8 @@ export const StyledEditor = () => {
 
   return (
     <>
-      <Wrapper>
+    <div ref={myRef}>
         <EditorStyled
-        ref={editor}
         className="container"
         value={snippet}
         options={OPTIONS}
@@ -62,7 +62,7 @@ export const StyledEditor = () => {
             font-family: ${font} !important;
           }
         `}</style>
-      </Wrapper>
+      </div>
     </>
   );
 };

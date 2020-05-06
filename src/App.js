@@ -1,17 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./App.css";
 import { StyledEditor } from "./components/CodeEditor";
 import SideNav from "./components/SideNav";
-import GlobalFonts from "./lib/styles/globalStyles";
 
 function App() {
+  const view = useRef();
   return (
     <div className="App">
-      <GlobalFonts />
-      <div class="wrapper">
-        <SideNav />
-        <StyledEditor />
-      </div>
+      <SideNav takeSnap={view} />
+      <StyledEditor myRef={view} />
     </div>
   );
 }

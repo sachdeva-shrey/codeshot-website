@@ -1,21 +1,23 @@
 import React, { createRef } from "react";
 import styled from "styled-components";
+import domtoimage from "dom-to-image";
+import { saveAs } from "file-saver";
 
 import { Export } from "./Export";
 import share_icon from "../lib/icons/share_icon.svg";
 import export_icon from "../lib/icons/export_icon.svg";
 
-const ExportButton = () => {
-  const ref = createRef();
-  const handleClick = () => {
-    return Export(ref);
-  };
+export function ExportButton ({ takeSnap }) {
+  function handleClick(a) {
+    let node = a.current;
+    domtoimage.toBlob(node, { width: node.scrollWidth}).then(function (blob) {
+      saveAs(blob, "myImage.png");
+    });
+  }
+
   return (
     <>
-      <Button
-        ref={ref}
-        onClick={handleClick}
-      >
+      <Button onClick={() => handleClick(takeSnap)}>
         <Icon src={export_icon} />
         Export
       </Button>
@@ -34,10 +36,10 @@ const ShareButton = () => {
   );
 };
 
-const Buttons = () => {
+const Buttons = ({ takeSnap }) => {
   return (
     <ButtonContainer>
-      <ExportButton />
+      <ExportButton takeSnap={takeSnap} />
       <ShareButton />
     </ButtonContainer>
   );
@@ -68,6 +70,6 @@ const ButtonContainer = styled.div`
   bottom: 50px;
   left: 0;
   z-index: 10;
-`
+`;
 
-export default Buttons
+export default Buttons;
