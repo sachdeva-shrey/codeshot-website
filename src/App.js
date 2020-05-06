@@ -4,11 +4,11 @@ import { StyledEditor } from "./components/CodeEditor";
 import SideNav from "./components/SideNav";
 
 function App() {
-  const view = useRef();
+  const editor = useRef();
   return (
     <div className="App">
-      <SideNav takeSnap={view} />
-      <StyledEditor myRef={view} />
+      <SideNav takeSnap={editor} />
+      <StyledEditor editor={editor} />
     </div>
   );
 }

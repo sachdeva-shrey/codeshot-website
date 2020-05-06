@@ -4,9 +4,9 @@ import "semantic-ui-css/semantic.css";
 import styled from "styled-components";
 
 import Store, { StoreContext } from "../utils/context/Store";
-import { themeOptions } from '../utils/constants/options/themeOptions';
-import { fontOptions } from '../utils/constants/options/fonts';
-import { languageOptions } from '../utils/constants/options/languageOptions';
+import { themeOptions } from "../utils/constants/options/themeOptions";
+import { fontOptions } from "../utils/constants/options/fonts";
+import { languageOptions } from "../utils/constants/options/languageOptions";
 import Selectors from "./Selectors";
 import "../lib/styles/dropdownStyles.css";
 import font_icon from "../lib/icons/font_icon.svg";
@@ -14,12 +14,11 @@ import theme_icon from "../lib/icons/theme_icon.svg";
 import background_icon from "../lib/icons/background_icon.svg";
 import language_icon from "../lib/icons/language_icon.svg";
 
-
 const DropdownWrapper = () => {
-  const {font, setFont} = useContext(StoreContext);
-  const {theme, setTheme} = useContext(StoreContext);
-  const {lang, setLang}  = useContext(StoreContext);
-  const {backgroundColor, setBackgroundColor} = useContext(StoreContext);
+  const { font, setFont } = useContext(StoreContext);
+  const { theme, setTheme } = useContext(StoreContext);
+  const { lang, setLang } = useContext(StoreContext);
+  const { backgroundColor, setBackgroundColor } = useContext(StoreContext);
 
   const handleThemeChange = (none, theme) => {
     setTheme(theme.value);
@@ -34,10 +33,9 @@ const DropdownWrapper = () => {
   };
 
   const handlePreview = (e) => {
-    if(e.target.value === '') {
-      setBackgroundColor("#F9F9F9")
-    }
-    else setBackgroundColor(e.target.value)
+    if (e.target.value === "") {
+      setBackgroundColor("#F9F9F9");
+    } else setBackgroundColor(e.target.value);
   };
 
   return (
@@ -90,7 +88,6 @@ const DropdownWrapper = () => {
           <Input placeholder="#F9F9F9" onChange={handlePreview} />
         </Container>
       </div>
-      
     </div>
   );
 };

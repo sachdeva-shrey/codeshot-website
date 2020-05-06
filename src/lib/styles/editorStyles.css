@@ -21,7 +21,6 @@
   height: auto !important;
   overscroll-behavior: none !important;
   width: 1000px;
-  /* overflow: scroll !important; */
   padding-left: 30px !important;
   padding-top: 30px !important;
   font-size: 1.2em;
@@ -36,7 +35,6 @@
   padding: 30px;
   margin-top: 20px;
   margin-bottom: 20px;
-  /* overflow: scroll !important; */
 }
 
 body .CodeMirror-scroll  {

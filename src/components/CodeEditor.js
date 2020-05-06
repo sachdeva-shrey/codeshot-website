@@ -1,25 +1,27 @@
-import React, { useRef, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Controlled as CodeMirror } from "react-codemirror2";
 import styled from "styled-components";
 import * as WebFont from "webfontloader";
 
 import "../lib/styles/editorStyles.css";
 import { StoreContext } from "../utils/context/Store";
-import { DEFAULT_FONTS } from '../utils/constants/options/fonts'
-import { DEFAULT_LANG, DEFAULT_THEME, DEFAULT_SNIPPET } from '../utils/constants/default/default'
+import { DEFAULT_FONTS } from "../utils/constants/options/fonts";
+import {
+  DEFAULT_LANG,
+  DEFAULT_THEME,
+  DEFAULT_SNIPPET,
+} from "../utils/constants/default/default";
 
 import "codemirror/lib/codemirror.css";
-import themes from '../utils/imports/modes'
+import themes from "../utils/imports/modes";
 
-export const StyledEditor = ({myRef}) => {
+export const StyledEditor = ({ editor }) => {
   const [snippet, setSnippet] = useState(`${DEFAULT_SNIPPET}`);
-  const {editorTheme, setEditorTheme} = useContext(StoreContext);
-  const {lang, setLang} = useContext(StoreContext);
-  const {font, setFont} = useContext(StoreContext);
-  const {fontSize, setFontSize} = useContext(StoreContext);
-  const {backgroundColor, setBackgroundColor} = useContext(StoreContext);
-
-  // const editor = useRef();
+  const { editorTheme, setEditorTheme } = useContext(StoreContext);
+  const { lang, setLang } = useContext(StoreContext);
+  const { font, setFont } = useContext(StoreContext);
+  const { fontSize, setFontSize } = useContext(StoreContext);
+  const { backgroundColor, setBackgroundColor } = useContext(StoreContext);
 
   WebFont.load({
     google: {
@@ -45,9 +47,8 @@ export const StyledEditor = ({myRef}) => {
   };
 
   return (
-    <>
-    <div ref={myRef}>
-        <EditorStyled
+    <div ref={editor}>
+      <EditorStyled
         className="container"
         value={snippet}
         options={OPTIONS}
@@ -56,14 +57,13 @@ export const StyledEditor = ({myRef}) => {
         fontSize={fontSize}
         font={font}
       />
-        <Style code={snippet} />
-        <style jsx>{`
-          .CodeMirror {
-            font-family: ${font} !important;
-          }
-        `}</style>
-      </div>
-    </>
+      <Style code={snippet} />
+      <style jsx>{`
+        .CodeMirror {
+          font-family: ${font} !important;
+        }
+      `}</style>
+    </div>
   );
 };
 
@@ -78,10 +78,8 @@ export const Style = (props) => {
 };
 
 const EditorStyled = styled(CodeMirror)`
-  font-family: ${props => props.font};
   background-color: ${(props) => props.backgroundColor};
   font-size: ${(props) => props.fontSize};
 `;
 
-const Wrapper = styled.div`
-`;
+const Wrapper = styled.div``;

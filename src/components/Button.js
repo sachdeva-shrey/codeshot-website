@@ -1,18 +1,13 @@
-import React, { createRef } from "react";
+import React from "react";
 import styled from "styled-components";
-import domtoimage from "dom-to-image";
-import { saveAs } from "file-saver";
 
-import { Export } from "./Export";
+import Export from "./Export";
 import share_icon from "../lib/icons/share_icon.svg";
 import export_icon from "../lib/icons/export_icon.svg";
 
-export function ExportButton ({ takeSnap }) {
-  function handleClick(a) {
-    let node = a.current;
-    domtoimage.toBlob(node, { width: node.scrollWidth}).then(function (blob) {
-      saveAs(blob, "myImage.png");
-    });
+export function ExportButton({ takeSnap }) {
+  function handleClick(editorDOM) {
+    Export(editorDOM);
   }
 
   return (
@@ -23,7 +18,7 @@ export function ExportButton ({ takeSnap }) {
       </Button>
     </>
   );
-};
+}
 
 const ShareButton = () => {
   return (
