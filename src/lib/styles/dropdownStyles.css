@@ -8,14 +8,8 @@
   overflow-x: scroll;
   background-color: #202125;
   width: 400px;
-  height: 100vh;
+  height: 120%;
   display: block;
-}
-
-.logo {
-  height: 30px;
-  width: auto;
-  margin: 30px;
 }
 
 h1 {
@@ -42,13 +36,13 @@ h1 {
   margin-top: 20px;
 }
 
-.wrapper-main:nth-child(2) {
+.wrapper-main:nth-child(1) {
   background-color: #16171b;
   border-radius: 6px;
   width: 350px;
   padding: 0px 20px 20px 20px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 70px;
 }
 
 .wrapper-main:hover {
