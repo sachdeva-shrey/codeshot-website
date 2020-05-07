@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Controlled as CodeMirror } from "react-codemirror2";
 import styled from "styled-components";
-import * as WebFont from "webfontloader";
+// import * as WebFont from "webfontloader";
 
 import "../lib/styles/editorStyles.css";
 import { StoreContext } from "../utils/context/Store";
@@ -24,11 +24,11 @@ export const StyledEditor = ({ editor }) => {
   const { fontSize, setFontSize } = useContext(StoreContext);
   const { backgroundColor, setBackgroundColor } = useContext(StoreContext);
 
-  WebFont.load({
-    google: {
-      families: DEFAULT_FONTS,
-    },
-  });
+  // WebFont.load({
+  //   google: {
+  //     families: DEFAULT_FONTS,
+  //   },
+  // });
 
   const OPTIONS = {
     theme: `${editorTheme}` || DEFAULT_THEME,

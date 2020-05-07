@@ -48,14 +48,14 @@ const Container = styled.div`
 const StarButton = styled(GitHubButton)`
   position: fixed;
   bottom: 20px;
-  left: 30px;
+  left: 110px;
   z-index: 10;
 `;
 
 const ForkButton = styled(GitHubButton)`
   position: fixed;
   bottom: 20px;
-  left: 100px;
+  left: 200px;
   z-index: 10;
 `;
 

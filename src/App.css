@@ -2,10 +2,10 @@ body {
   background-color: #16171B !important;
 }
 
-@font-face {
+/* @font-face {
   font-family: Fira-Code-Regular;
   src: url("./lib/fonts/FiraCode-Regular.otf");
-}
+} */
 
 @font-face {
   font-family: Anonymous;

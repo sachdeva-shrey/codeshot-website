@@ -3,13 +3,13 @@
   padding: 0;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
+/* @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext"); */
 
-
+/* 
 @font-face {
   font-family: Fira-Code-Regular;
   src: url("../fonts/FiraCode-Regular.otf");
-}
+} */
 
 @font-face {
   font-family: Anonymous;

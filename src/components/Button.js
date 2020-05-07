@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
+import share from "./share"
 import Export from "./Export";
 import share_icon from "../lib/icons/share_icon.svg";
 import export_icon from "../lib/icons/export_icon.svg";
 
 export function ExportButton({ takeSnap }) {
-  function handleClick(editorDOM) {
+  function handleExport(editorDOM) {
     Export(editorDOM);
   }
-
   return (
     <>
-      <Button onClick={() => handleClick(takeSnap)}>
+      <Button onClick={() => handleExport(takeSnap)}>
         <Icon src={export_icon} />
         Export
       </Button>
@@ -21,9 +21,12 @@ export function ExportButton({ takeSnap }) {
 }
 
 const ShareButton = () => {
+  function handleShare() {
+    share();
+  }
   return (
     <>
-      <Button>
+      <Button onClick={() => handleShare()}>
         <Icon src={share_icon} />
         Share
       </Button>
@@ -49,7 +52,7 @@ const Button = styled.button`
   height: 40px;
   width: 100px;
   margin-top: 20px;
-  margin-left: 60px;
+  margin-left: 40px;
   outline: none;
   cursor: pointer;
 `;
@@ -65,6 +68,7 @@ const ButtonContainer = styled.div`
   top: 50px;
   left: 0;
   z-index: 10;
+  margin-left: 40px;
 `;
 
 export default Buttons;
