@@ -14,6 +14,7 @@ import {
 
 import "codemirror/lib/codemirror.css";
 import themes from "../utils/imports/modes";
+import "codemirror/mode/asn.1/asn.1"
 
 export const StyledEditor = ({ editor }) => {
   const [snippet, setSnippet] = useState(`${DEFAULT_SNIPPET}`);

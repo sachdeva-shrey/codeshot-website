@@ -4,7 +4,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
   overflow-x: scroll;
   background-color: #202125;
   width: 400px;
@@ -14,7 +13,7 @@
 
 h1 {
   margin: 0;
-  font-size: 20px !important;
+  font-size: 16px;
   font-family: "Manrope";
   color: #fff;
   display: inline-block;
@@ -23,7 +22,7 @@ h1 {
 }
 
 .icon {
-  height: 20px;
+  height: 16px;
   width: auto;
 }
 
@@ -42,13 +41,13 @@ h1 {
   width: 350px;
   padding: 0px 20px 20px 20px;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 130px;
 }
 
 .wrapper-main:hover {
-  background-color: #40A9F3;
+  background-color: #40a9f3;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0px 7px #40A9F3;
+  box-shadow: 0 0px 7px #40a9f3;
 }
 
 .dropdown {
@@ -62,6 +61,7 @@ h1 {
   color: #fff !important;
   border: none !important;
   font-family: "Manrope" !important;
+  z-index: 10;
 }
 
 .ui.dropdown .menu,
@@ -96,4 +96,12 @@ h1 {
   border: none !important;
   font-family: "Manrope" !important;
   width: 280px !important;
+}
+
+.ui.dropdown {
+  z-index: 0;
+}
+
+.ui.dropdown.menu {
+  z-index: 10;
 }

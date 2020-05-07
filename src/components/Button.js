@@ -45,7 +45,7 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   padding: 10px;
-  color: #fff;
+  color: #FFFFFF;
   height: 40px;
   width: 100px;
   margin-top: 20px;
@@ -55,14 +55,14 @@ const Button = styled.button`
 `;
 
 const Icon = styled.img`
-  height: 20px;
-  width: 20px;
+  height: 16px;
+  width: 16px;
   margin-right: 10px;
 `;
 
 const ButtonContainer = styled.div`
   position: fixed;
-  bottom: 50px;
+  top: 50px;
   left: 0;
   z-index: 10;
 `;

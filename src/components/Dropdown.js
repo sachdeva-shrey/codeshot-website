@@ -8,7 +8,7 @@ import { themeOptions } from "../utils/constants/options/themeOptions";
 import { fontOptions } from "../utils/constants/options/fonts";
 import { languageOptions } from "../utils/constants/options/languageOptions";
 import Selectors from "./Selectors";
-import "../lib/styles/dropdownStyles.css";
+import "../lib/styles/sidenavStyles.css";
 import font_icon from "../lib/icons/font_icon.svg";
 import theme_icon from "../lib/icons/theme_icon.svg";
 import background_icon from "../lib/icons/background_icon.svg";
@@ -45,10 +45,10 @@ const DropdownWrapper = () => {
         <h1>Theme</h1>
         <Dropdown
           className="dropdown"
-          options={themeOptions}
-          placeholder="Dracula"
           search
           selection
+          options={themeOptions}
+          placeholder="Dracula"
           defaultValue="dracula"
           onChange={handleThemeChange}
         />
@@ -99,6 +99,7 @@ const ColorPreview = styled.div`
   margin-right: 10px;
   background-color: ${(props) => props.color};
 `;
+
 const Container = styled.div`
   display: flex;
 `;

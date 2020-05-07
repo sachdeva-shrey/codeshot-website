@@ -2,34 +2,6 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { StoreContext } from "../utils/context/Store";
 
-const Button = styled.button`
-  /* Same as above */
-`;
-
-const ButtonToggle = styled(Button)`
-  opacity: 0.6;
-  border: none;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 20px;
-  margin-right: 20px;
-  outline: none;
-  background-color: #202125;
-  cursor: pointer;
-
-  ${({ active }) =>
-    active &&
-    `
-    background-color: #000;
-    opacity: 1;
-  `}
-`;
-
-const ButtonGroup = styled.div`
-  display: flex;
-`;
-
 export default function Selectors() {
   const types = ["H1", "H2", "H3", "H4"];
   const {fontSize, setFontSize} = useContext(StoreContext);
@@ -67,4 +39,31 @@ export default function Selectors() {
   );
 }
 
+const Button = styled.button`
+  /* Same as above */
+`;
+
+const ButtonToggle = styled(Button)`
+  opacity: 0.6;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 20px;
+  outline: none;
+  background-color: #202125;
+  cursor: pointer;
+
+  ${({ active }) =>
+    active &&
+    `
+    background-color: #000;
+    opacity: 1;
+  `}
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
+`;
 
