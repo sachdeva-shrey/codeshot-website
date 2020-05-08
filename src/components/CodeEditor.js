@@ -1,11 +1,9 @@
 import React, { useState, useContext } from "react";
 import { Controlled as CodeMirror } from "react-codemirror2";
 import styled from "styled-components";
-// import * as WebFont from "webfontloader";
 
 import "../lib/styles/editorStyles.css";
 import { StoreContext } from "../utils/context/Store";
-import { DEFAULT_FONTS } from "../utils/constants/options/fonts";
 import {
   DEFAULT_LANG,
   DEFAULT_THEME,
@@ -13,8 +11,14 @@ import {
 } from "../utils/constants/default/default";
 
 import "codemirror/lib/codemirror.css";
-import themes from "../utils/imports/modes";
-import "codemirror/mode/asn.1/asn.1"
+import "codemirror/mode/xml/xml";
+import "codemirror/mode/javascript/javascript";
+import "codemirror/mode/css/css";
+import "codemirror/mode/jsx/jsx";
+import "codemirror/lib/codemirror.css";
+import "codemirror/theme/dracula.css";
+import "codemirror/theme/panda-syntax.css";
+import "codemirror/theme/material.css";
 
 export const StyledEditor = ({ editor }) => {
   const [snippet, setSnippet] = useState(`${DEFAULT_SNIPPET}`);
@@ -23,12 +27,6 @@ export const StyledEditor = ({ editor }) => {
   const { font, setFont } = useContext(StoreContext);
   const { fontSize, setFontSize } = useContext(StoreContext);
   const { backgroundColor, setBackgroundColor } = useContext(StoreContext);
-
-  // WebFont.load({
-  //   google: {
-  //     families: DEFAULT_FONTS,
-  //   },
-  // });
 
   const OPTIONS = {
     theme: `${editorTheme}` || DEFAULT_THEME,

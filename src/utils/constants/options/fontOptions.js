@@ -1,20 +1,3 @@
-export const DEFAULT_FONTS = [
-  // "Open Sans",
-  // "Roboto",
-  // "Roboto Slab",
-  // "Roboto Condensed",
-  // "Lato",
-  // "Oswald",
-  // "Lora",
-  // "Raleway",
-  // "Montserrat",
-  // "Merriweather",
-  // "Indie Flower",
-  // "Dosis",
-  // "Arvo",
-  // "Abel",
-];
-
 export const fontOptions = [
   { key: "mono-space", value: "mono-space", text: "Mono Space" },
   { key: "ibm", value: "ibm", text: "IBM Plex" },

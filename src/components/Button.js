@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-import share from "./share"
-import Export from "./Export";
+import shareCode from "./shareCode"
+import exportCode from "./exportCode";
 import share_icon from "../lib/icons/share_icon.svg";
 import export_icon from "../lib/icons/export_icon.svg";
 
 export function ExportButton({ takeSnap }) {
   function handleExport(editorDOM) {
-    Export(editorDOM);
+    exportCode(editorDOM);
   }
   return (
     <>
@@ -22,7 +22,7 @@ export function ExportButton({ takeSnap }) {
 
 const ShareButton = () => {
   function handleShare() {
-    share();
+    shareCode();
   }
   return (
     <>

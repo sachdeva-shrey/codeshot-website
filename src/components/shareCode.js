@@ -1,7 +1,6 @@
 import domtoimage from "dom-to-image";
-import React from "react";
 
-export default function share() {
+export default function shareCode() {
   var node = document.getElementById("root");
 
   domtoimage

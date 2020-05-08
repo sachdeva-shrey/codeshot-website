@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 import Store, { StoreContext } from "../utils/context/Store";
 import { themeOptions } from "../utils/constants/options/themeOptions";
-import { fontOptions } from "../utils/constants/options/fonts";
+import { fontOptions } from "../utils/constants/options/fontOptions";
 import { languageOptions } from "../utils/constants/options/languageOptions";
 import Selectors from "./Selectors";
 import "../lib/styles/sidenavStyles.css";
@@ -59,10 +59,10 @@ const DropdownWrapper = () => {
         <Dropdown
           className="dropdown"
           options={fontOptions}
-          placeholder="Raleway"
+          placeholder="Fira Code"
           search
           selection
-          defaultValue="Raleway"
+          defaultValue="Fira Code"
           onChange={handleFontChange}
         />
         <Selectors />
