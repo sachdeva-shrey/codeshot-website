@@ -3,7 +3,7 @@ import { Dropdown, Input } from "semantic-ui-react";
 import "semantic-ui-css/semantic.css";
 import styled from "styled-components";
 
-import Store, { StoreContext } from "../utils/context/Store";
+import { StoreContext } from "../utils/context/Store";
 import { themeOptions } from "../utils/constants/options/themeOptions";
 import { fontOptions } from "../utils/constants/options/fontOptions";
 import { languageOptions } from "../utils/constants/options/languageOptions";
@@ -16,12 +16,12 @@ import language_icon from "../lib/icons/language_icon.svg";
 
 const DropdownWrapper = () => {
   const { font, setFont } = useContext(StoreContext);
-  const { theme, setTheme } = useContext(StoreContext);
+  const { editorTheme, setEditorTheme } = useContext(StoreContext);
   const { lang, setLang } = useContext(StoreContext);
   const { backgroundColor, setBackgroundColor } = useContext(StoreContext);
 
   const handleThemeChange = (none, theme) => {
-    setTheme(theme.value);
+    setEditorTheme(theme.value);
   };
 
   const handleFontChange = (none, font) => {
