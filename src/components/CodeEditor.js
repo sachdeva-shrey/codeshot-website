@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Controlled as CodeMirror } from "react-codemirror2";
 import styled from "styled-components";
 
-import "../lib/styles/editorStyles.css";
+import "../lib/styles/editor-styles.css";
 import { StoreContext } from "../utils/context/Store";
 import {
   DEFAULT_LANG,
@@ -15,7 +15,6 @@ import "codemirror/mode/xml/xml";
 import "codemirror/mode/javascript/javascript";
 import "codemirror/mode/css/css";
 import "codemirror/mode/jsx/jsx";
-import "codemirror/lib/codemirror.css";
 import "codemirror/theme/dracula.css";
 import "codemirror/theme/panda-syntax.css";
 import "codemirror/theme/material.css";

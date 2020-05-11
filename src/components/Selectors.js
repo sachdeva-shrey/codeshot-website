@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+
 import { StoreContext } from "../utils/context/Store";
 
-export default function Selectors() {
+const Selectors = () => {
   const types = ["H1", "H2", "H3", "H4"];
   const {fontSize, setFontSize} = useContext(StoreContext);
   let size;
@@ -38,6 +39,8 @@ export default function Selectors() {
       </ButtonGroup>
   );
 }
+
+export default Selectors
 
 const Button = styled.button`
   /* Same as above */
