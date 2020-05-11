@@ -26,7 +26,7 @@ export const themeOptions = [
     { key: "liquibyte", value: "liquibyte", text: "Liquibyte" },
     { key: "lucario", value: "lucario", text: "Lucario" },
     { key: "material-darker", value: "material-darker", text: "Material Darker" },
-    { key: "material-ocean", value: "material-ocean", text: "Material Ccean" },
+    { key: "material-ocean", value: "material-ocean", text: "Material Ocean" },
     { key: "material-palenight", value: "material-palenight", text: "Material Palenight" },
     { key: "mbo", value: "mbo", text: "Mbo" },
     { key: "mdn-like", value: "mdn-like", text: "Mdn Like" },

@@ -3,14 +3,14 @@ import { Input } from "semantic-ui-react";
 import styled from "styled-components";
 
 import { StoreContext } from "../utils/context/Store";
+import { DEFAULT_BACKGROUND } from "../utils/constants/default/default"
 import background_icon from "../lib/icons/background_icon.svg";
 
 const BackgroundInput = () => {
   const { backgroundColor, setBackgroundColor } = useContext(StoreContext);
-
   const handlePreview = (e) => {
     if (e.target.value === "") {
-      setBackgroundColor("#F9F9F9");
+      setBackgroundColor({DEFAULT_BACKGROUND});
     } else setBackgroundColor(e.target.value);
   };
   return (
@@ -19,7 +19,7 @@ const BackgroundInput = () => {
       <h1>Background Color</h1>
       <Container>
         <ColorPreview color={backgroundColor}></ColorPreview>
-        <Input placeholder="#F9F9F9" onChange={handlePreview} />
+        <Input placeholder={DEFAULT_BACKGROUND} onChange={handlePreview} />
       </Container>
     </div>
   );

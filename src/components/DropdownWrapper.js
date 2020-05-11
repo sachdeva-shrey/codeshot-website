@@ -36,8 +36,8 @@ const DropdownWrapper = () => {
         iconSrc={theme_icon}
         iconAlt="theme_icon"
         options={themeOptions}
-        placeholder="Dracula"
-        defaultValue="dracula"
+        placeholder="Material Ocean"
+        defaultValue="material-ocean"
         onChange={handleThemeChange}
         selector={false}
       />

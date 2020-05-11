@@ -17,7 +17,8 @@ import "codemirror/mode/css/css";
 import "codemirror/mode/jsx/jsx";
 import "codemirror/theme/dracula.css";
 import "codemirror/theme/panda-syntax.css";
-import "codemirror/theme/material.css";
+import "codemirror/theme/material-ocean.css";
+import "codemirror/theme/material-palenight.css";
 
 export const StyledEditor = ({ editor }) => {
   const [snippet, setSnippet] = useState(`${DEFAULT_SNIPPET}`);

@@ -3,11 +3,11 @@ import React, { useState } from "react";
 export const StoreContext = React.createContext({});
 
 const Store = ({ children }) => {
-  const [editorTheme, setEditorTheme] = useState("dracula");
+  const [editorTheme, setEditorTheme] = useState("material-ocean");
   const [lang, setLang] = useState("javascript");
   const [font, setFont] = useState("Fira Code");
   const [fontSize, setFontSize] = useState("16px");
-  const [backgroundColor, setBackgroundColor] = useState("#f9f9f9");
+  const [backgroundColor, setBackgroundColor] = useState("#40a9f3");
   return (
     <StoreContext.Provider
       value={{

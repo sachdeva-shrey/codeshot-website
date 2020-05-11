@@ -64,6 +64,9 @@ const ButtonToggle = styled(Button)`
     background-color: #000;
     opacity: 1;
   `}
+  &:hover {
+    background-color: #202125;
+  }
 `;
 
 const ButtonGroup = styled.div`

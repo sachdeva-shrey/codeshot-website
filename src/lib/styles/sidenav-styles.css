@@ -19,6 +19,7 @@ h1 {
   display: inline-block;
   padding-left: 10px !important;
   margin: calc(1rem - 0.14285714em) 0em 1rem !important;
+  letter-spacing: 0.08em;
 }
 
 .icon {
