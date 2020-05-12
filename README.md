@@ -1,12 +1,26 @@
 ## Description 🗣
 
-Take aesthetic screenshots of your code in over 59+ available themes and languages!
+Create and share aesthetic screenshots of your code in over 50+ available themes & languages!
+
+## Preview 📺
+
+<div align="center">
+  <img alt="Screenshot" src="src/lib/icons/screenshot.png" />
+</div>
 
 ## Installation 🔧
 
 1. Clone this repository using Git.
 2. Open a Node.js command prompt in the root folder of the project.
 3. Run `npm install` to install all dependencies.
+
+## License 📜
+
+`codeshot` is available under the MIT license. See the LICENSE file for more info.
+
+## Contributing 🤝
+
+Please read `CONTRIBUTING.md` for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Forking this repo 🚨
 
