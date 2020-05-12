@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "semantic-ui-css/semantic.css";
 
-import DropDown from "./Dropdown";
+import SemanticDropdown from "./Dropdown";
 import BackgroundInput from "./BackgroundInput";
 import { StoreContext } from "../utils/context/Store";
 import { themeOptions } from "../utils/constants/options/themeOptions";
@@ -13,25 +13,23 @@ import theme_icon from "../lib/icons/theme_icon.svg";
 import language_icon from "../lib/icons/language_icon.svg";
 
 const DropdownWrapper = () => {
-  const { font, setFont } = useContext(StoreContext);
-  const { editorTheme, setEditorTheme } = useContext(StoreContext);
-  const { lang, setLang } = useContext(StoreContext);
+  const { setFont, setEditorTheme, setLang } = useContext(StoreContext);
 
-  const handleThemeChange = (none, theme) => {
+  const handleThemeChange = (_, theme) => {
     setEditorTheme(theme.value);
   };
 
-  const handleFontChange = (none, font) => {
+  const handleFontChange = (_, font) => {
     setFont(font.value);
   };
 
-  const handleLanguageChange = (none, lang) => {
+  const handleLanguageChange = (_, lang) => {
     setLang(lang.value);
   };
 
   return (
     <div className="side-nav">
-      <DropDown
+      <SemanticDropdown
         header="Theme"
         iconSrc={theme_icon}
         iconAlt="theme_icon"
@@ -41,7 +39,7 @@ const DropdownWrapper = () => {
         onChange={handleThemeChange}
         selector={false}
       />
-      <DropDown
+      <SemanticDropdown
         header="Font"
         iconSrc={font_icon}
         iconAlt="font_icon"
@@ -51,7 +49,7 @@ const DropdownWrapper = () => {
         onChange={handleFontChange}
         selector={true}
       />
-      <DropDown
+      <SemanticDropdown
         header="Language"
         iconSrc={language_icon}
         iconAlt="language_icon"
