@@ -5,3 +5,7 @@ export const DEFAULT_SNIPPET = `import * as React from 'react'\r\nimport { withR
 export const DEFAULT_THEME = `material-ocean`;
 
 export const DEFAULT_BACKGROUND = '#40a9f3'
+
+export const DEFAULT_FONT = 'Fira-Code'
+
+export const DEFAULT_FONT_SIZE = '16px'

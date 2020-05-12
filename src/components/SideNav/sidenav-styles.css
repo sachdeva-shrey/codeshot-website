@@ -98,3 +98,7 @@ h1 {
   font-family: "Manrope" !important;
   width: 280px !important;
 }
+
+.ui.dropdown {
+  z-index: 0;
+}

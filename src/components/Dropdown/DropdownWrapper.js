@@ -45,7 +45,7 @@ const DropdownWrapper = () => {
         iconAlt="fontIcon"
         options={fontOptions}
         placeholder="Fira Code"
-        defaultValue="Fira Code"
+        defaultValue="Fira-Code"
         onChange={handleFontChange}
         selector={true}
       />
