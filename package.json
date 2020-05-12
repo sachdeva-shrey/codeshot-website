@@ -15,7 +15,6 @@
     "react-codemirror-runmode": "^1.0.5",
     "react-codemirror2": "^7.1.0",
     "react-dom": "^16.13.1",
-    "react-github-btn": "^1.2.0",
     "react-github-button": "^0.1.11",
     "react-scripts": "3.4.1",
     "semantic-ui-css": "^2.4.1",
@@ -24,9 +23,9 @@
     "styled-jsx": "^3.2.5"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom"
   },
   "eslintConfig": {
     "extends": "react-app"

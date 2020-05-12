@@ -9,16 +9,7 @@ import {
   DEFAULT_THEME,
   DEFAULT_SNIPPET,
 } from "../../utils/constants/default/default";
-
 import "codemirror/lib/codemirror.css";
-import "codemirror/mode/xml/xml";
-import "codemirror/mode/javascript/javascript";
-import "codemirror/mode/css/css";
-import "codemirror/mode/jsx/jsx";
-import "codemirror/theme/dracula.css";
-import "codemirror/theme/panda-syntax.css";
-import "codemirror/theme/material-ocean.css";
-import "codemirror/theme/material-palenight.css";
 
 export const StyledEditor = ({ editor }) => {
   const [snippet, setSnippet] = useState(`${DEFAULT_SNIPPET}`);

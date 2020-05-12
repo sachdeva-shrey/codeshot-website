@@ -35,7 +35,7 @@ export const languageOptions = [
   { key: "go", value: "go", text: "Go" },
   { key: "groovy", value: "groovy", text: "Groovy" },
   { key: "haml", value: "haml", text: "Haml" },
-  { key: "handlebars", value: "handlebars", text: "Gandlebars" },
+  { key: "handlebars", value: "handlebars", text: "Handlebars" },
   { key: "haskell-literate", value: "haskell-literate", text: "Haskell Literate"},
   { key: "haskell", value: "haskell", text: "Haskell" },
   { key: "haxe", value: "haxe", text: "Haxe" },
