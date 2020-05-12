@@ -2,13 +2,13 @@ import React, { useState, useContext } from "react";
 import { Controlled as CodeMirror } from "react-codemirror2";
 import styled from "styled-components";
 
-import "../lib/styles/editor-styles.css";
-import { StoreContext } from "../utils/context/Store";
+import "./editor-styles.css";
+import { StoreContext } from "../../utils/context/Store";
 import {
   DEFAULT_LANG,
   DEFAULT_THEME,
   DEFAULT_SNIPPET,
-} from "../utils/constants/default/default";
+} from "../../utils/constants/default/default";
 
 import "codemirror/lib/codemirror.css";
 import "codemirror/mode/xml/xml";

@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 import shareCode from "./shareCode"
 import exportCode from "./exportCode";
-import share_icon from "../lib/icons/share_icon.svg";
-import export_icon from "../lib/icons/export_icon.svg";
+import shareIcon from "../../lib/icons/share_icon.svg";
+import exportIcon from "../../lib/icons/export_icon.svg";
 
 export function ExportButton({ takeSnap }) {
   function handleExport(editorDOM) {
@@ -13,7 +13,7 @@ export function ExportButton({ takeSnap }) {
   return (
     <>
       <Button onClick={() => handleExport(takeSnap)}>
-        <Icon src={export_icon} />
+        <Icon src={exportIcon} />
         Export
       </Button>
     </>
@@ -27,7 +27,7 @@ const ShareButton = () => {
   return (
     <>
       <Button onClick={() => handleShare()}>
-        <Icon src={share_icon} />
+        <Icon src={shareIcon} />
         Share
       </Button>
     </>

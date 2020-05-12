@@ -2,15 +2,15 @@ import React, { useContext } from "react";
 import "semantic-ui-css/semantic.css";
 
 import SemanticDropdown from "./Dropdown";
-import BackgroundInput from "./BackgroundInput";
-import { StoreContext } from "../utils/context/Store";
-import { themeOptions } from "../utils/constants/options/themeOptions";
-import { fontOptions } from "../utils/constants/options/fontOptions";
-import { languageOptions } from "../utils/constants/options/languageOptions";
-import "../lib/styles/sidenav-styles.css";
-import font_icon from "../lib/icons/font_icon.svg";
-import theme_icon from "../lib/icons/theme_icon.svg";
-import language_icon from "../lib/icons/language_icon.svg";
+import BackgroundInput from "../Input/BackgroundInput";
+import { StoreContext } from "../../utils/context/Store";
+import { themeOptions } from "../../utils/constants/options/themeOptions";
+import { fontOptions } from "../../utils/constants/options/fontOptions";
+import { languageOptions } from "../../utils/constants/options/languageOptions";
+import "../SideNav/sidenav-styles.css";
+import fontIcon from "../../lib/icons/font_icon.svg";
+import themeIcon from "../../lib/icons/theme_icon.svg";
+import languageIcon from "../../lib/icons/language_icon.svg";
 
 const DropdownWrapper = () => {
   const { setFont, setEditorTheme, setLang } = useContext(StoreContext);
@@ -31,8 +31,8 @@ const DropdownWrapper = () => {
     <div className="side-nav">
       <SemanticDropdown
         header="Theme"
-        iconSrc={theme_icon}
-        iconAlt="theme_icon"
+        iconSrc={themeIcon}
+        iconAlt="themeIcon"
         options={themeOptions}
         placeholder="Material Ocean"
         defaultValue="material-ocean"
@@ -41,8 +41,8 @@ const DropdownWrapper = () => {
       />
       <SemanticDropdown
         header="Font"
-        iconSrc={font_icon}
-        iconAlt="font_icon"
+        iconSrc={fontIcon}
+        iconAlt="fontIcon"
         options={fontOptions}
         placeholder="Fira Code"
         defaultValue="Fira Code"
@@ -51,8 +51,8 @@ const DropdownWrapper = () => {
       />
       <SemanticDropdown
         header="Language"
-        iconSrc={language_icon}
-        iconAlt="language_icon"
+        iconSrc={languageIcon}
+        iconAlt="languageIcon"
         options={languageOptions}
         placeholder="Javascript"
         defaultValue="javascript"

@@ -1,26 +1,18 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 
-import { StoreContext } from "../utils/context/Store";
+import { StoreContext } from "../../utils/context/Store";
 
 const Selectors = () => {
   const types = ["H1", "H2", "H3", "H4"];
-  const {fontSize, setFontSize} = useContext(StoreContext);
+  const {setFontSize} = useContext(StoreContext);
   let size;
 
   const handleClick = (e) => {
-    if(e.target.value === 'H1') {
-      size = '20px'
-    }
-    else if(e.target.value === 'H2') {
-      size = '18px'
-    }
-    else if(e.target.value === 'H3') {
-      size = '16px'
-    }
-    else if(e.target.value === 'H4') {
-      size = '14px'
-    }
+    if(e.target.value === 'H1') size = '20px'
+    else if(e.target.value === 'H2') size = '18px'
+    else if(e.target.value === 'H3') size = '16px'
+    else if(e.target.value === 'H4') size = '14px'
     setFontSize(size)
   }
 

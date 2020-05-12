@@ -4,10 +4,9 @@ import styled from "styled-components";
 import GitHubButton from "react-github-button";
 import "react-github-button/assets/style.css";
 
-import DropdownWrapper from "./DropdownWrapper";
-import "../lib/styles/sidenav-styles.css";
-import Buttons from "./Button";
-import logo from "../lib/icons/logo.png";
+import DropdownWrapper from "../Dropdown/DropdownWrapper";
+import Buttons from "../Button/Button";
+import logo from "../../lib/icons/logo.png";
 
 function SideNav({ takeSnap }) {
   return (

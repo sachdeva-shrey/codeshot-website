@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./App.css";
-import { StyledEditor } from "./components/CodeEditor";
-import SideNav from "./components/SideNav";
+import { StyledEditor } from "./components/CodeEditor/CodeEditor";
+import SideNav from "./components/SideNav/SideNav";
 
 function App() {
   const editor = useRef();

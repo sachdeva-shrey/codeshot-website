@@ -1,7 +1,7 @@
 import React from "react";
 import { Dropdown } from "semantic-ui-react";
 
-import Selectors from "./Selectors";
+import Selectors from "../Button/Selectors";
 
 const SemanticDropdown = (props) => {
   const {

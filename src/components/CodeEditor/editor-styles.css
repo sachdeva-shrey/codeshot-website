@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: Anonymous;
-  src: url("../fonts/Anonymous.ttf");
+  src: url("../../lib/fonts/Anonymous.ttf");
 }
 
 .CodeMirror {
