@@ -17,14 +17,14 @@ function SideNav({ takeSnap }) {
       <StarButton
         type="stargazers"
         size="small"
-        namespace="benjycui"
-        repo="react-github-button"
+        namespace="shrey-sachdeva2000"
+        repo="codeshot-website"
       />
       <ForkButton
         className="hallo"
         type="forks"
-        namespace="benjycui"
-        repo="react-github-button"
+        namespace="shrey-sachdeva2000"
+        repo="codeshot-website"
       />
     </Container>
   );
