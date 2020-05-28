@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-import shareCode from "./shareCode"
+import shareCode from "./shareCode";
 import exportCode from "./exportCode";
 import shareIcon from "../../lib/icons/share_icon.svg";
 import exportIcon from "../../lib/icons/export_icon.svg";
 
 export function ExportButton({ takeSnap }) {
+  const [isExported, setExported] = useState(false);
   function handleExport(editorDOM) {
+    setExported(true);
     exportCode(editorDOM);
   }
   return (
     <>
       <Button onClick={() => handleExport(takeSnap)}>
         <Icon src={exportIcon} />
-        Export
+        {isExported ? "Exporting" : "Export"}
       </Button>
     </>
   );
@@ -48,9 +50,9 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   padding: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
   height: 40px;
-  width: 100px;
+  width: 120px;
   margin-top: 20px;
   margin-left: 40px;
   outline: none;
@@ -68,7 +70,7 @@ const ButtonContainer = styled.div`
   top: 50px;
   left: 0;
   z-index: 10;
-  margin-left: 40px;
+  margin-left: 20px;
 `;
 
 export default Buttons;

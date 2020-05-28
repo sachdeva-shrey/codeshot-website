@@ -13,11 +13,7 @@ import "codemirror/lib/codemirror.css";
 
 export const StyledEditor = ({ editor }) => {
   const [snippet, setSnippet] = useState(`${DEFAULT_SNIPPET}`);
-  const { editorTheme, setEditorTheme } = useContext(StoreContext);
-  const { lang, setLang } = useContext(StoreContext);
-  const { font, setFont } = useContext(StoreContext);
-  const { fontSize, setFontSize } = useContext(StoreContext);
-  const { backgroundColor, setBackgroundColor } = useContext(StoreContext);
+  const { editorTheme, lang, font, fontSize, backgroundColor } = useContext(StoreContext);
 
   const OPTIONS = {
     theme: `${editorTheme}` || DEFAULT_THEME,
@@ -72,4 +68,3 @@ const EditorStyled = styled(CodeMirror)`
   font-size: ${(props) => props.fontSize};
 `;
 
-const Wrapper = styled.div``;
