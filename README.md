@@ -1,6 +1,6 @@
 ## Description 🗣
 
-Create and share aesthetic screenshots of your code in over 50+ available themes & languages!
+Create and share aesthetic screenshots of your code in over 100+ available themes & languages!
 
 ## Preview 📺
 
