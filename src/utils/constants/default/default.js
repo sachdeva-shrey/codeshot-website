@@ -8,4 +8,4 @@ export const DEFAULT_BACKGROUND = '#40a9f3'
 
 export const DEFAULT_FONT = 'Fira-Code'
 
-export const DEFAULT_FONT_SIZE = '16px'
+export const DEFAULT_FONT_SIZE = '14px'
