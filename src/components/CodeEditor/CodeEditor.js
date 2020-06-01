@@ -33,9 +33,8 @@ export const StyledEditor = ({ editor }) => {
   };
 
   return (
-    <div ref={editor}>
+    <div className="container" ref={editor}>
       <EditorStyled
-        className="container"
         value={snippet}
         options={OPTIONS}
         onBeforeChange={onChange}

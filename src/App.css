@@ -1,20 +1,19 @@
 body {
-  background-color: #16171B !important;
+  background-color: #16171b !important;
 }
 
 /* Add local fonts */
-
 @font-face {
   font-family: Anonymous;
-  src: url('./lib/fonts/Anonymous.ttf');
+  src: url("./lib/fonts/Anonymous.ttf");
 }
 @font-face {
   font-family: Deja-Vu-Sans-Mono;
-  src: url('./lib/fonts/DejaVuSansMono.ttf');
+  src: url("./lib/fonts/DejaVuSansMono.ttf");
 }
 @font-face {
   font-family: Droid-Sans;
-  src: url('./lib/fonts/DroidSansMono.ttf');
+  src: url("./lib/fonts/DroidSansMono.ttf");
 }
 @font-face {
   font-family: Fira-Code;
@@ -22,29 +21,35 @@ body {
 }
 @font-face {
   font-family: Iosevka;
-  src: url('./lib/fonts/iosevka-regular.ttf');
+  src: url("./lib/fonts/iosevka-regular.ttf");
 }
 @font-face {
   font-family: Menlo;
-  src: url('./lib/fonts/Menlo-Regular.ttf');
+  src: url("./lib/fonts/Menlo-Regular.ttf");
 }
 @font-face {
   font-family: Monaco;
-  src: url('./lib/fonts/Monaco.ttf');
+  src: url("./lib/fonts/Monaco.ttf");
 }
 @font-face {
   font-family: Source-Code;
-  src: url('./lib/fonts/SourceCodePro-Regular.otf');
+  src: url("./lib/fonts/SourceCodePro-Regular.otf");
 }
 @font-face {
   font-family: Space-Mono;
-  src: url('./lib/fonts/SpaceMono-Regular.ttf');
+  src: url("./lib/fonts/SpaceMono-Regular.ttf");
 }
 @font-face {
   font-family: Ubuntu-Mono;
-  src: url('./lib/fonts/UbuntuMono-R.ttf');
+  src: url("./lib/fonts/UbuntuMono-R.ttf");
 }
 @font-face {
   font-family: Victor-Mono;
-  src: url('./lib/fonts/VictorMono-Regular.otf');
+  src: url("./lib/fonts/VictorMono-Regular.otf");
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-areas: "sidenav editor";
 }

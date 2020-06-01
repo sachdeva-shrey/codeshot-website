@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+import GithubCorner from 'react-github-corner';
+
 import "./App.css";
 import { StyledEditor } from "./components/CodeEditor/CodeEditor";
 import SideNav from "./components/SideNav/SideNav";
@@ -29,6 +31,7 @@ function App() {
     <div className="App">
       <SideNav takeSnap={editor} />
       <StyledEditor editor={editor} />
+      <GithubCorner href="https://github.com/sachdeva-shrey/codeshot-website" />
     </div>
   );
 }

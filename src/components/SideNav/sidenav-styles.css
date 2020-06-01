@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Manrope");
 
 .side-nav {
+  grid-area: sidenav;
   position: fixed;
-  top: 0;
-  left: 0;
   overflow-x: scroll;
   background-color: #202125;
-  width: 400px;
-  height: 120%;
-  display: block;
+  height: 100vh;
+  padding: 30px;
 }
 
 h1 {
@@ -30,19 +28,9 @@ h1 {
 .wrapper-main {
   background-color: #16171b;
   border-radius: 6px;
-  width: 350px;
   padding: 0px 20px 20px 20px;
   margin: 0 auto;
   margin-top: 20px;
-}
-
-.wrapper-main:nth-child(1) {
-  background-color: #16171b;
-  border-radius: 6px;
-  width: 350px;
-  padding: 0px 20px 20px 20px;
-  margin: 0 auto;
-  margin-top: 130px;
 }
 
 .wrapper-main:hover {

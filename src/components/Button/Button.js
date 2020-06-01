@@ -38,10 +38,10 @@ const ShareButton = () => {
 
 const Buttons = ({ takeSnap }) => {
   return (
-    <ButtonContainer>
+    <div>
       <ExportButton takeSnap={takeSnap} />
       <ShareButton />
-    </ButtonContainer>
+    </div>
   );
 };
 
@@ -53,8 +53,8 @@ const Button = styled.button`
   color: #ffffff;
   height: 40px;
   width: 120px;
+  margin-left: 45px;
   margin-top: 20px;
-  margin-left: 40px;
   outline: none;
   cursor: pointer;
 `;
@@ -63,14 +63,6 @@ const Icon = styled.img`
   height: 16px;
   width: 16px;
   margin-right: 10px;
-`;
-
-const ButtonContainer = styled.div`
-  position: fixed;
-  top: 50px;
-  left: 0;
-  z-index: 10;
-  margin-left: 20px;
 `;
 
 export default Buttons;

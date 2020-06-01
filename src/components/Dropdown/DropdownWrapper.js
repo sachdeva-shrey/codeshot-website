@@ -28,7 +28,7 @@ const DropdownWrapper = () => {
   };
 
   return (
-    <div className="side-nav">
+    <div>
       <SemanticDropdown
         header="Theme"
         iconSrc={themeIcon}
